@@ -459,19 +459,33 @@ h6 {
     }
 
     .featured-project .project-image {
-        display: none;
-        /* Hide complex image layout on mobile for cleaner view, OR stack it */
-        /* Let's choose to show it stacked atop */
+        display: block;
         width: 100%;
-        height: 200px;
+        height: auto;
+        min-height: 200px;
         margin-bottom: 1rem;
         grid-column: auto;
         grid-row: auto;
     }
 
-    .featured-project .project-image {
-        display: block;
-        /* Re-enable */
+    /* Remove grayscale and overlay on mobile - show images in full color */
+    .featured-project .project-image::before {
+        background-color: transparent !important;
+    }
+
+    .featured-project .project-image img {
+        filter: none !important;
+        /* Show colored images on mobile */
+    }
+
+    /* Adjust gallery for mobile */
+    .project-gallery {
+        max-height: 300px;
+        padding: 10px;
+    }
+
+    .featured-project .project-image .project-gallery img {
+        max-height: 280px;
     }
 
     .featured-project.alt-layout .project-content {
@@ -625,6 +639,14 @@ h6 {
         padding: 0 var(--spacing-sm);
     }
 
+    .container {
+        padding: 0 1rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
     .nav {
         display: none;
         /* Mobile menu implementation usually requires JS toggle */
@@ -636,6 +658,27 @@ h6 {
 
     .hero-title {
         font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title::after {
+        width: 100px;
+    }
+
+    /* Ensure project cards fit mobile viewport */
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .projects-grid {
+        gap: 2rem;
     }
 }
 
