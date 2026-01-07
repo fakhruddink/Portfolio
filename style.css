@@ -43,6 +43,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -51,6 +52,8 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     transition: var(--transition);
+    overflow-x: hidden;
+    width: 100%;
 }
 
 a {
@@ -87,15 +90,18 @@ h6 {
     margin-bottom: var(--spacing-lg);
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .section-title::after {
     content: "";
     display: block;
     width: 200px;
+    max-width: 100%;
     height: 1px;
     background-color: var(--border-color);
     margin-left: 1rem;
+    flex-shrink: 1;
 }
 
 .section-number {
@@ -641,10 +647,13 @@ h6 {
 
     .container {
         padding: 0 1rem;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .section {
         padding: 3rem 0;
+        overflow-x: hidden;
     }
 
     .nav {
@@ -654,31 +663,77 @@ h6 {
 
     .hero-name {
         font-size: 2.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-title {
         font-size: 2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-description {
         font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        flex-wrap: wrap;
     }
 
     .section-title {
         font-size: 1.5rem;
+        max-width: 100%;
     }
 
     .section-title::after {
-        width: 100px;
+        width: 60px;
+        min-width: 40px;
     }
 
     /* Ensure project cards fit mobile viewport */
     .project-card {
         padding: 1.5rem;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     .projects-grid {
         gap: 2rem;
+        overflow-x: hidden;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        word-wrap: break-word;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .project-tech-list {
+        font-size: 0.7rem;
+    }
+
+    /* Fix gallery overflow */
+    .project-gallery {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Ensure all text elements wrap properly */
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
     }
 }
 
