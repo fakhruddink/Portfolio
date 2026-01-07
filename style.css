@@ -440,11 +440,14 @@ h6 {
 /* Mobile Responsive for Featured */
 @media (max-width: 768px) {
     .featured-project {
-        display: block;
+        display: block !important;
         /* Stack vertically */
         background-color: var(--surface-color) !important;
-        padding: var(--spacing-md) !important;
+        padding: 1rem !important;
         border-radius: 8px;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .featured-project:hover {
@@ -458,6 +461,8 @@ h6 {
         background-color: transparent;
         box-shadow: none;
         z-index: auto;
+        width: 100%;
+        max-width: 100%;
     }
 
     .featured-project:hover .project-content {
@@ -467,11 +472,13 @@ h6 {
     .featured-project .project-image {
         display: block;
         width: 100%;
+        max-width: 100%;
         height: auto;
         min-height: 200px;
         margin-bottom: 1rem;
         grid-column: auto;
         grid-row: auto;
+        overflow: hidden;
     }
 
     /* Remove grayscale and overlay on mobile - show images in full color */
@@ -484,14 +491,21 @@ h6 {
         /* Show colored images on mobile */
     }
 
-    /* Adjust gallery for mobile */
+    /* Adjust gallery for mobile - critical for preventing overflow */
     .project-gallery {
         max-height: 300px;
-        padding: 10px;
+        padding: 5px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        gap: 5px;
+        margin: 0;
     }
 
     .featured-project .project-image .project-gallery img {
         max-height: 280px;
+        width: auto;
+        max-width: none;
     }
 
     .featured-project.alt-layout .project-content {
@@ -532,6 +546,7 @@ h6 {
     font-size: 0.75rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    max-width: 100%;
 }
 
 .project-links {
