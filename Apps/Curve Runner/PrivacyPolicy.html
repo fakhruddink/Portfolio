@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Privacy Policy - Curve Runner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #2d3748;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 60px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .content {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 32px;
+            line-height: 1.8;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .policy-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .policy-item {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #667eea;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #2d3748;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+
+
+        .policy-item strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .footer p {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .last-updated {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .content {
+                padding: 30px 24px;
+            }
+
+            .policy-item {
+                padding: 20px 22px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+            }
+
+            .icon svg {
+                width: 30px;
+                height: 30px;
+            }
+
+            .content {
+                padding: 24px 18px;
+            }
+
+            .intro {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" />
+                </svg>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Curve Runner</p>
+        </div>
+
+        <div class="content">
+            <ul class="policy-list">
+                <li class="policy-item">
+                    <strong>No Personal Data Collection:</strong> We do not collect, store, or share any personal
+                    information from users. Your data stays with you.
+                </li>
+                <li class="policy-item">
+                    <strong>Ad Display Only:</strong> The app displays Google AdMob ads, which may collect limited
+                    non-personal data for ad performance and personalization purposes.
+                </li>
+                <li class="policy-item">
+                    <strong>No Account Required:</strong> No sign-in, account creation, or user tracking is required to
+                    use this app. Play freely and anonymously.
+                </li>
+                <li class="policy-item">
+                    <strong>Internet for Ads:</strong> An internet connection is only used to display advertisements. No
+                    other data transmission occurs.
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>
